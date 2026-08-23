@@ -40,7 +40,14 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--cream);
+  background: linear-gradient(
+    180deg,
+    var(--pink) 0%,
+    var(--sky) 22%,
+    var(--lilac) 42%,
+    var(--sky) 68%,
+    var(--pink) 100%
+  );
   overflow-x: hidden;
   line-height: 1.5;
 }
@@ -236,6 +243,7 @@ section {
 /* ---------- Hero ---------- */
 
 .hero {
+  position: relative;
   min-height: 92vh;
   display: flex;
   flex-direction: column;
@@ -243,7 +251,6 @@ section {
   justify-content: center;
   text-align: center;
   padding-top: 60px;
-  background: linear-gradient(160deg, var(--pink) 0%, var(--sky) 55%, var(--lilac) 100%);
   overflow: hidden;
 }
 
@@ -294,6 +301,7 @@ section {
   width: 140px;
   height: 140px;
   border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 20px 40px rgba(122, 67, 38, 0.25);
   border: 5px solid var(--white);
   animation: float-badge 5s ease-in-out infinite;
@@ -415,10 +423,6 @@ section {
 
 /* ---------- Produtos ---------- */
 
-.produtos {
-  background: var(--white);
-}
-
 .produtos__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -454,10 +458,12 @@ section {
   height: 110px;
   margin: 0 auto 20px;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
+  box-shadow: 0 12px 22px rgba(122, 67, 38, 0.28);
 }
 
 .card__media--donut {
@@ -466,6 +472,12 @@ section {
 
 .card__media--mousse {
   background: radial-gradient(circle at 30% 30%, var(--lilac), var(--lilac-deep));
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__title {
@@ -519,7 +531,6 @@ section {
 /* ---------- Promoção ---------- */
 
 .promo {
-  background: linear-gradient(160deg, var(--sky) 0%, var(--pink) 100%);
   display: flex;
   justify-content: center;
 }
@@ -536,21 +547,20 @@ section {
   overflow: hidden;
 }
 
-.promo__confetti {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  font-size: 1.4rem;
-  letter-spacing: 18px;
-  opacity: 0.5;
-  padding: 8px 0;
-  background: var(--yellow);
+.promo__banner {
+  margin: -48px -40px 24px;
+  overflow: hidden;
+}
+
+.promo__banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .promo__pill {
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 4px;
   font-family: var(--font-display);
   font-weight: 700;
   background: var(--pink-deep);
@@ -701,5 +711,9 @@ section {
 
   .promo__card {
     padding: 40px 24px;
+  }
+
+  .promo__banner {
+    margin: -40px -24px 20px;
   }
 }

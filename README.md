@@ -15,8 +15,12 @@ doce-boutique/
 │   └── script.js       # menu mobile, confetes, animações de scroll
 ├── assets/
 │   └── img/
-│       ├── logo-original.png       # logo criada pelas alunas
-│       └── panfleto-original.png   # panfleto apresentado na banca (referência)
+│       ├── logo.png                 # logo original usada no site (gerada por IA)
+│       ├── mini-donuts.png          # ilustração dos Mini Donuts (gerada por IA)
+│       ├── mousse-maracuja.png      # ilustração da Mousse de Maracujá (gerada por IA)
+│       ├── promo-banner.png         # banner da promoção/sorteio (gerado por IA)
+│       ├── logo-original.png        # logo criada pelas alunas (referência histórica)
+│       └── panfleto-original.png    # panfleto apresentado na banca (referência histórica)
 └── README.md
 ```
 
@@ -80,57 +84,41 @@ fazer o sorteio "oficialmente".
   nas variáveis dentro de `:root` (`--pink`, `--sky`, `--yellow`, `--lilac`, etc.).
 - **Textos da promoção**: seção `<section id="promocao">`.
 
-## 4. Sobre a logo atual e sugestão de evolução
+## 4. Sobre a logo
 
-A logo e o panfleto originais (em `assets/img/`) usam uma imagem do
-personagem **Homer Simpson**, que é um personagem protegido por direitos
-autorais (Fox/Disney). Para uma apresentação escolar isso tende a ser
-tranquilo, mas **não é recomendado para uma versão pública e "premium" do
-site**, publicada com o nome da marca. Para deixar 100% original e ainda mais
-com a cara da Doce Boutique, seguem prompts prontos para gerar novas imagens
-em qualquer IA de geração de imagem (Midjourney, DALL·E, Ideogram, Bing Image
-Creator, etc.):
+O site usa hoje `assets/img/logo.png`: uma logo 100% original, gerada por IA,
+mantendo a identidade visual criada pelas alunas (selo circular, tipografia
+cursiva "Doce Boutique", "Produtos artesanais" embaixo, detalhe de linha de
+costura tipo etiqueta de boutique). Os arquivos `logo-original.png` e
+`panfleto-original.png` continuam em `assets/img/` apenas como referência
+histórica do material apresentado na banca — eles usavam uma imagem do
+personagem **Homer Simpson**, protegido por direitos autorais (Fox/Disney),
+por isso não são mais usados no site publicado.
 
-### 🎨 Prompt — Logo/mascote original
-
-```
-Cute flat vector logo mascot for a teen bakery brand called "Doce Boutique".
-A friendly cartoon mini donut character with big sparkly eyes and a shy smile,
-winking, chocolate glaze with colorful sprinkles, soft pastel color palette
-(pink, light blue, yellow, lilac), rounded circular badge frame, cursive
-hand-lettered "Doce Boutique" text on top, small "Produtos artesanais" text
-at the bottom, thin decorative thread/needle stitch line on the side like a
-boutique tag, minimal flat illustration style, clean vector, white background,
-no photorealism.
-```
-
-### 🍩 Prompt — Ilustração dos Mini Donuts
+Caso queira gerar variações da logo atual, este foi o prompt (ajustado após
+alguns testes para corrigir assimetrias no rosto do mascote):
 
 ```
-Flat vector illustration of a stack of 4 mini donuts with pastel glaze
-(pink, yellow, lilac) and colorful sprinkles, cute and playful style,
-soft pastel background, rounded shapes, subtle drop shadow, aimed at a
-fun dessert brand for teenagers, no text, square composition.
+Cute kawaii-style flat vector logo mascot for a teen bakery brand called
+"Doce Boutique". A chocolate glazed mini donut character with colorful
+sprinkles on top. The donut has a simple, symmetrical kawaii face centered
+on the lower front of the donut (not overlapping the donut hole): two small
+round black eyes evenly spaced and aligned at the same height, a tiny simple
+smile, small rosy cheek blushes, no eyebrows, no eyelashes, minimal facial
+detail in the style of Japanese kawaii food mascots or cute emoji stickers.
+Soft pastel color palette (pink, light blue, yellow, lilac). Rounded circular
+badge frame around the donut, cursive hand-lettered "Doce Boutique" text on
+top of the badge, small "Produtos artesanais" text at the bottom of the
+badge, thin decorative thread/needle stitch line on the side like a boutique
+tag. Clean flat vector illustration, bold clean outlines, minimal shading,
+centered composition, white background, no photorealism, no 3D.
 ```
 
-### 🍮 Prompt — Ilustração da Mousse de Maracujá
-
-```
-Flat vector illustration of a small glass cup of passion fruit mousse
-(pale yellow cream with passion fruit seeds and a berry on top), cute
-dessert illustration, pastel purple and yellow color palette, soft
-rounded shapes, subtle drop shadow, playful style for a teen dessert
-brand, no text, square composition.
-```
-
-### 🎉 Prompt — Banner/ilustração da promoção
-
-```
-Flat vector illustration of a cute gift box overflowing with mini donuts
-and a passion fruit mousse cup, confetti and sparkles around it, pastel
-pink/lilac/yellow color palette, playful and fun style for a teenage
-dessert brand promotion, no text, wide composition.
-```
+Todas as ilustrações originais já foram geradas e estão em uso no site:
+Mini Donuts (`assets/img/mini-donuts.png`), Mousse de Maracujá
+(`assets/img/mousse-maracuja.png`) e o banner da promoção
+(`assets/img/promo-banner.png`, exibido no topo do card de "Promoção
+especial"). Caso queira gerar novas variações, segue um prompt extra opcional:
 
 ### 🌈 Prompt — Padrão/textura de fundo (opcional)
 
@@ -139,11 +127,6 @@ Seamless flat vector pattern with mini donuts, sprinkles, small hearts and
 sparkles scattered on a soft pastel pink background, cute and playful style
 for a teen dessert brand, subtle and not too busy, tileable pattern.
 ```
-
-Depois de gerar as imagens, basta salvá-las em `assets/img/` (ex:
-`mascote.png`, `donuts.png`, `mousse.png`) e trocar as referências
-correspondentes no `index.html` (hoje os produtos usam emojis 🍩🍮 como
-placeholder no lugar de fotos reais).
 
 ## 5. Público-alvo e tom de voz
 
