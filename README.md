@@ -39,29 +39,27 @@ Não há build/dependências — é HTML, CSS e JS puros. Basta abrir o
 Como é um site 100% estático, não é necessário nenhum passo de build ou
 GitHub Actions — o GitHub Pages serve os arquivos diretamente.
 
-## 2. Configurar o formulário de avaliação (Google Forms)
+## 2. Formulário de avaliação (Google Forms)
 
-O site é estático, então a coleta de respostas (Nome + Nota) e o sorteio
-usam o **Google Forms + Google Sheets**, que é gratuito e não exige nenhum
-servidor:
+O site é estático, então a coleta de respostas (Nome, Celular e Avaliação) e
+o sorteio usam o **Google Forms + Google Sheets**, que é gratuito e não
+exige nenhum servidor. O formulário já está criado e o link já está
+configurado no botão "Quero Participar!" da seção de promoção:
 
-1. Acesse [forms.google.com](https://forms.google.com) e crie um novo formulário, ex: **"Avalie a Doce Boutique 🍩"**.
-2. Adicione duas perguntas:
-   - **Nome** — resposta curta, obrigatória.
-   - **Nota (de 0 a 5)** — pergunta do tipo "Grade" (grade escala linear de 0 a 5) ou múltipla escolha com as opções 0, 1, 2, 3, 4, 5, obrigatória.
-3. (Opcional) Adicione uma mensagem de confirmação como "Obrigada por avaliar! Boa sorte no sorteio 🍀".
-4. Clique em **Enviar** → aba do link (🔗) → copie o link do formulário.
-5. No arquivo `index.html`, procure por:
+[Avalie a Doce Boutique 🍩 e concorra a um kit surpresa!](https://docs.google.com/forms/d/e/1FAIpQLScmpm0Cvp2blVEBfueUMtayMZPCqhRw2kb7m0E6VDGScWGeUg/viewform)
 
-   ```html
-   href="https://forms.gle/SUBSTITUA-PELO-LINK-DO-SEU-GOOGLE-FORMS"
-   ```
+Campos do formulário:
+- **Nome** — resposta curta, obrigatória.
+- **Celular** — resposta curta (validado como número), obrigatória.
+- **Avaliação (nota de 0 a 5)** — grade linear de 0 a 5, obrigatória.
 
-   e substitua pelo link real do seu formulário.
+Caso precise trocar o link no futuro (ex: criar um novo formulário), procure
+por `href="https://docs.google.com/forms` no `index.html` e substitua pelo
+novo link.
 
-6. Para ver as respostas: no próprio Google Forms, clique na aba **Respostas**
-   → ícone do Google Sheets (canto superior direito) → **Criar planilha**.
-   Todas as respostas (Nome + Nota) vão aparecer automaticamente ali.
+Para ver as respostas: no próprio Google Forms, clique na aba **Respostas**
+→ ícone do Google Sheets (canto superior direito) → **Criar planilha**.
+Todas as respostas (Nome, Celular e Nota) vão aparecer automaticamente ali.
 
 ### Sorteando o nome vencedor
 
