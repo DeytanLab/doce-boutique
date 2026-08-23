@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doce Boutique 🍩 | Docinhos artesanais</title>
+  <meta name="description" content="Doce Boutique - Mini Donuts e Mousse de Maracujá artesanais. Avalie nosso trabalho e concorra a um kit surpresa!" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍩%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#hero" class="navbar__brand">
+        <img src="assets/img/logo-original.png" alt="Logo Doce Boutique" class="navbar__logo" />
+        <span class="navbar__brand-text">Doce Boutique</span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#hero" class="navbar__link">Início</a>
+        <a href="#produtos" class="navbar__link">Produtos</a>
+        <a href="#promocao" class="navbar__link navbar__link--cta">Promoção 🎁</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+
+      <div class="hero__content">
+        <img src="assets/img/logo-original.png" alt="Doce Boutique" class="hero__badge" />
+        <h1 class="hero__title">
+          Doce <span class="hero__title-script">Boutique</span>
+        </h1>
+        <p class="hero__tagline">Docinhos artesanais feitos com amor 💛<br>Mini Donuts e Mousse de Maracujá pra adoçar seu dia!</p>
+
+        <div class="hero__actions">
+          <a href="#produtos" class="btn btn--primary">Ver Produtos 🍩</a>
+          <a href="#promocao" class="btn btn--ghost">Promoção Especial 🎉</a>
+        </div>
+      </div>
+
+      <div class="hero__float hero__float--1" aria-hidden="true">🍩</div>
+      <div class="hero__float hero__float--2" aria-hidden="true">🍮</div>
+      <div class="hero__float hero__float--3" aria-hidden="true">✨</div>
+      <div class="hero__float hero__float--4" aria-hidden="true">🍩</div>
+      <div class="hero__float hero__float--5" aria-hidden="true">💜</div>
+
+      <a href="#produtos" class="scroll-hint" aria-label="Rolar para produtos">
+        <span></span>
+      </a>
+    </section>
+
+    <section id="produtos" class="produtos">
+      <div class="section-heading">
+        <span class="section-heading__pill">Nossos docinhos</span>
+        <h2 class="section-heading__title">Feitos pra te fazer sorrir 😋</h2>
+        <p class="section-heading__subtitle">Cada receita é preparada artesanalmente, com bastante carinho e capricho!</p>
+      </div>
+
+      <div class="produtos__grid">
+        <article class="card card--reveal">
+          <div class="card__media card__media--donut">
+            <span class="card__emoji">🍩</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Mini Donuts</h3>
+            <p class="card__desc">Docinhos fofinhos e macios, cobertos de sabor em cada mordida.</p>
+            <div class="card__price">
+              <span class="card__price-value">R$ 10</span>
+              <span class="card__price-detail">a cada 4 unidades</span>
+            </div>
+            <span class="card__badge">Mais pedido ⭐</span>
+          </div>
+        </article>
+
+        <article class="card card--reveal">
+          <div class="card__media card__media--mousse">
+            <span class="card__emoji">🍮</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Mousse de Maracujá</h3>
+            <p class="card__desc">Cremoso, levinho e com aquele toque azedinho gostoso do maracujá.</p>
+            <div class="card__price">
+              <span class="card__price-value">R$ 5</span>
+              <span class="card__price-detail">por unidade</span>
+            </div>
+            <span class="card__badge card__badge--alt">Refrescante 💜</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="promocao" class="promo">
+      <div class="promo__card card--reveal">
+        <div class="promo__confetti" aria-hidden="true">🎉 🍩 ✨ 🍮 🎊</div>
+        <span class="promo__pill">Promoção especial</span>
+        <h2 class="promo__title">Avalie nosso trabalho <br> e concorra a um kit surpresa! 🎁</h2>
+        <p class="promo__desc">
+          Deixe sua nota para o nosso projeto e participe do sorteio de um
+          <strong>kit com 4 Mini Donuts + 1 Mousse de Maracujá</strong>,
+          totalmente grátis!
+        </p>
+
+        <ol class="promo__steps">
+          <li><span>1.</span> Clique no botão abaixo</li>
+          <li><span>2.</span> Preencha seu nome e dê uma nota de 0 a 5</li>
+          <li><span>3.</span> Aguarde o resultado do sorteio 🍀</li>
+        </ol>
+
+        <a
+          href="https://forms.gle/SUBSTITUA-PELO-LINK-DO-SEU-GOOGLE-FORMS"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--promo"
+        >
+          Quero Participar! 🎉
+        </a>
+
+        <p class="promo__fineprint">
+          O sorteio será feito entre todas as avaliações recebidas. O nome sorteado será
+          contatado pela nossa equipe. Promoção válida enquanto durar o projeto escolar.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__brand-name">Doce Boutique</span>
+        <span class="footer__brand-tag">Produtos artesanais</span>
+      </div>
+      <p class="footer__note">
+        Projeto de Empreendedorismo · 8º ano · Ensino Fundamental II 🎓
+      </p>
+      <p class="footer__students">
+        Alunas: Alice, Ana Letícia, Francesca e Julia
+      </p>
+      <p class="footer__sponsor">
+        Parceiro e patrocinador: <strong>Deytan Lab</strong>
+      </p>
+      <p class="footer__copy">© <span id="year"></span> Doce Boutique. Feito com 💛 para a feira de empreendedorismo.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
